@@ -1,0 +1,458 @@
+body {
+    font-family: "RalewayRegular", sans-serif;
+/*    color: white;*/
+    font-weight: normal;
+    font-size: 14px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.7;
+    background-color: #181818;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialised;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+/*    color: red;*/
+}
+
+body input:required:valid,
+body textarea:required:valid {
+/*    color: green;*/
+}
+
+.hidden {
+    display: none;
+}
+
+.left-side {
+    background-color: #111;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    color: white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    overflow-x: hidden;
+    outline: none;
+    z-index: 50;
+}
+
+.left-side.active {
+    width: 300px;
+}
+
+
+/*Чтобы отобразился контент когда открыто меню*/
+.left-side.active .user-info {
+    opacity: 1;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    transition-delay: .5s;
+}
+
+.left-side.active .btn-mnu {
+    background: transparent; /*Чтобы скрыть фон кнопки когда меню открыто*/
+}
+
+/*Left Side button menu start*/
+.btn-mnu {
+    width: 50px;
+    height: 50px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a00606;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.btn-row {
+    height: 2px;
+    width: 60%;
+    margin: 2px 0;
+    background-color: white;
+    position: relative;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.btn-mnu.active .btn-row:first-child {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: 6px;
+}
+
+.btn-mnu.active .btn-row:last-child {
+    -webkit-transform: rotate(-225deg);
+    -ms-transform: rotate(-225deg);
+    -o-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    top: -6px;
+}
+
+.btn-mnu.active .btn-row:nth-child(2) {
+    opacity: 0;
+}/*Left Side button end*/
+
+.aside-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    padding: 25px 0px;
+    overflow: hidden;
+}
+
+.user-info {
+    text-align: center;
+    opacity: 0; /*Чтобы скрыть контент когда меню свёрнуто*/
+    white-space: nowrap; /*Чтобы строки не сворачивались*/
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.user-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-info h2 {
+    font-size: 16px;
+}
+
+.user-info p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #848181;
+}
+
+.aside-content nav {
+    margin: 35px 0px;
+    position: relative;
+    z-index: 4;
+}
+
+.aside-content ul,
+.aside-content li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.aside-content li a {
+    color: #a7a7a7;
+    display: block;
+    padding: 10px 0px 10px 70px;
+    white-space: nowrap;
+}
+
+.aside-content li a:first-child {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.aside-content li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.aside-content li a:hover {
+    text-decoration: none;
+    color: white;
+    background: #563be8;
+}
+
+.left-side.active .aside-content li a:hover {
+    text-indent: 5px;
+}
+
+/*Для общего расположения опций меню и иконок*/
+.aside-content li a:before {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "linea-basic-10";
+    margin: -4px 13px 0px -55px;
+    font-size: 25px;
+    line-height: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/*Для отступа меню при его открытии*/
+.left-side.active .aside-content li a:before {
+    margin-left: -32px;
+}
+
+.left-side .aside-content nav {
+    margin-top: -195px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    transition-delay: .2s;
+}
+
+.left-side.active .aside-content nav {
+    margin-top: 35px;
+}
+
+.aside-content li:nth-child(1) a:before {
+    content: "{"; /*Так задаём иконки меню из шрифтовых иконок*/
+}
+
+.aside-content li:nth-child(2) a:before {
+    content: "u";
+}
+
+.aside-content li:nth-child(3) a:before {
+    content: "<";
+}
+
+/*Стили для иконки загруки сайта*/
+.loader {
+	background: none repeat scroll 0 0 #ffffff;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+.loader .loader-inner {
+	background-image: url("../img/preloader.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-posirion: center center;
+	background-color: #fff;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}/*Стили для иконки загруки сайта*/
+
+.content {
+    position: relative;
+    margin: 5px 5px 55px 55px;
+    min-width: 350px;
+}
+
+/*Стили для вида галлерени картинок*/
+.gallery a {
+    overflow: hidden;
+    width: 320px;
+    min-height: 50px;
+    display: block;
+}
+
+.gallery img {
+    display: block;
+    max-width: 100%;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+/*Для отступа галлереи при открытии меню*/
+.left-side.active + .content {
+    left: 250px;
+}/*Стили для вида галлерени картинок*/
+
+.gallery img:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.filter-items {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: right;
+    width: 100%;
+    min-width: 350px;
+    padding: 10px 10px 0px 10px;
+    background-color: #181818;
+}
+
+
+.filter-label {
+    background-color: transparent;
+    border-color: white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    padding: 5px 15px;
+    opacity: .4;
+    margin: 0px 3px 15px 5px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: 1px solid white;
+}
+
+.filter-label:hover,
+.filter-label:active {
+    background-color: #563be8;
+    opacity: 1;
+    border-color: #563be8;
+}
+
+.mfp-figure button.mfp-close {
+    background-color: #a00606;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    position: fixed;
+    right: 17px;
+    text-align: center
+}
+
+/*Стилизация для карусели галлереи*/
+.mfp-fade.mfp-bg {
+    opacity: .7;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: .7;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: .7;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    left: 100%;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    left: 0;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    left: 100%;
+}/*Стилизация для карусели галлереи*/
+
+.inside {
+    background-color: #181818;
+    color: #ada8a8;
+}
+
+.inside .content {
+    padding: 70px 10% 50px; /*top sides bottom*/
+}
+
+.content-header {
+    text-align: center;
+}
+
+.content-header img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.content-header p {
+    letter-spacing: 3px;
+}
+
+.content-body {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.form-contacts {
+    margin-top: 60px;
+}
+
+.form-contacts form {
+    background-color: #292929;
+    padding: 25px;
+    color: white;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.ul-contacts li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0px 0px 35px 0px;
+}
+
+.ul-contacts i {
+    vertical-align: middle;
+    font-size: 26px;
+    margin: 0px 8px 0px 0px;
+}
+
+.ul-contacts h3 {
+    margin-bottom: 3px;
+    font-size: 20px;
+}
+
+.content-body a {
+    color: #563be8;
+    text-decoration: underline;
+}
+
+.callback h3 {
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+    font-size: 20px;
+}
+
+.callback button {
+    display: block;
+    border: none;
+    background: brown;
+    border-radius: 5px;
+    line-height: 32px;
+    padding: 0px 15px;
+    margin: 5px auto 0px auto;
+}
+
+.form-contacts label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #BDBDBD;
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+
+.form-contacts input,
+.form-contacts textarea {
+    display: block;
+    width: 100%;
+    border: 1px #484848 solid;
+    background: #2e2e2e;
+    color: white;
+    padding: 7px 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    max-width: 100%;
+}
