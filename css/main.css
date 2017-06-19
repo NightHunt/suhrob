@@ -1,6 +1,6 @@
 body {
     font-family: "RalewayRegular", sans-serif;
-/*    color: white;*/
+    /*    color: white;*/
     font-weight: normal;
     font-size: 14px;
     min-width: 320px;
@@ -8,17 +8,16 @@ body {
     line-height: 1.7;
     background-color: #181818;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialised;
 }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-/*    color: red;*/
+    /*    color: red;*/
 }
 
 body input:required:valid,
 body textarea:required:valid {
-/*    color: green;*/
+    /*    color: green;*/
 }
 
 .hidden {
@@ -26,7 +25,7 @@ body textarea:required:valid {
 }
 
 .left-side {
-    background-color: #111;
+    background-color: #111111;
     position: fixed;
     left: 0;
     top: 0;
@@ -44,7 +43,6 @@ body textarea:required:valid {
 .left-side.active {
     width: 300px;
 }
-
 
 /*Чтобы отобразился контент когда открыто меню*/
 .left-side.active .user-info {
@@ -71,7 +69,7 @@ body textarea:required:valid {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #a00606;
+    background-color: #A00606;
     cursor: pointer;
     position: relative;
     float: right;
@@ -109,13 +107,15 @@ body textarea:required:valid {
 
 .btn-mnu.active .btn-row:nth-child(2) {
     opacity: 0;
-}/*Left Side button end*/
+}
+
+/*Left Side button end*/
 
 .aside-content {
     position: absolute;
     top: 50px;
     width: 100%;
-    padding: 25px 0px;
+    padding: 25px 0;
     overflow: hidden;
 }
 
@@ -145,7 +145,7 @@ body textarea:required:valid {
 }
 
 .aside-content nav {
-    margin: 35px 0px;
+    margin: 35px 0;
     position: relative;
     z-index: 4;
 }
@@ -158,10 +158,15 @@ body textarea:required:valid {
 }
 
 .aside-content li a {
-    color: #a7a7a7;
+    color: #A7A7A7;
     display: block;
-    padding: 10px 0px 10px 70px;
+    padding: 10px 0 10px 70px;
     white-space: nowrap;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 .aside-content li a:first-child {
@@ -175,7 +180,7 @@ body textarea:required:valid {
 .aside-content li a:hover {
     text-decoration: none;
     color: white;
-    background: #563be8;
+    background: #563BE8;
 }
 
 .left-side.active .aside-content li a:hover {
@@ -186,8 +191,8 @@ body textarea:required:valid {
 .aside-content li a:before {
     display: inline-block;
     vertical-align: middle;
-    font-family: "linea-basic-10";
-    margin: -4px 13px 0px -55px;
+    font-family: "linea-basic-10", sans-serif;
+    margin: -4px 13px 0 -55px;
     font-size: 25px;
     line-height: 0;
     -webkit-transition: all .5s;
@@ -226,31 +231,33 @@ body textarea:required:valid {
 
 /*Стили для иконки загруки сайта*/
 .loader {
-	background: none repeat scroll 0 0 #ffffff;
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
-	z-index: 5;
+    background: none repeat scroll 0 0 #FFFFFF;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .loader .loader-inner {
-	background-image: url("../img/preloader.gif");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-posirion: center center;
-	background-color: #fff;
-	height: 60px;
-	width: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
-	left: 50%;
-	top: 50%;
-	position: absolute;
-}/*Стили для иконки загруки сайта*/
+    background-image: url("../img/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-posirion: center center;
+    background-color: #FFFFFF;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+/*Стили для иконки загруки сайта*/
 
 .content {
     position: relative;
@@ -277,7 +284,9 @@ body textarea:required:valid {
 /*Для отступа галлереи при открытии меню*/
 .left-side.active + .content {
     left: 250px;
-}/*Стили для вида галлерени картинок*/
+}
+
+/*Стили для вида галлерени картинок*/
 
 .gallery img:hover {
     -webkit-transform: scale(1.5);
@@ -294,20 +303,18 @@ body textarea:required:valid {
     text-align: right;
     width: 100%;
     min-width: 350px;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0 10px;
     background-color: #181818;
 }
 
-
 .filter-label {
     background-color: transparent;
-    border-color: white;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     padding: 5px 15px;
     opacity: .4;
-    margin: 0px 3px 15px 5px;
+    margin: 0 3px 15px 5px;
     font-size: 12px;
     letter-spacing: 3px;
     border: 1px solid white;
@@ -315,13 +322,13 @@ body textarea:required:valid {
 
 .filter-label:hover,
 .filter-label:active {
-    background-color: #563be8;
+    background-color: #563BE8;
     opacity: 1;
-    border-color: #563be8;
+    border-color: #563BE8;
 }
 
 .mfp-figure button.mfp-close {
-    background-color: #a00606;
+    background-color: #A00606;
     height: 50px;
     width: 50px;
     padding: 0;
@@ -336,11 +343,11 @@ body textarea:required:valid {
 }
 
 .mfp-fade.mfp-bg.mfp-ready {
-	opacity: .7;
+    opacity: .7;
 }
 
 .mfp-fade.mfp-bg.mfp-removing {
-	opacity: .7;
+    opacity: .7;
 }
 
 .mfp-fade.mfp-wrap .mfp-content {
@@ -356,11 +363,13 @@ body textarea:required:valid {
 
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     left: 100%;
-}/*Стилизация для карусели галлереи*/
+}
+
+/*Стилизация для карусели галлереи*/
 
 .inside {
     background-color: #181818;
-    color: #ada8a8;
+    color: #ADA8A8;
 }
 
 .inside .content {
@@ -401,13 +410,13 @@ body textarea:required:valid {
 .ul-contacts li {
     list-style-type: none;
     padding: 0;
-    margin: 0px 0px 35px 0px;
+    margin-bottom: 35px;
 }
 
 .ul-contacts i {
     vertical-align: middle;
     font-size: 26px;
-    margin: 0px 8px 0px 0px;
+    margin-right: 8px;
 }
 
 .ul-contacts h3 {
@@ -416,24 +425,24 @@ body textarea:required:valid {
 }
 
 .content-body a {
-    color: #563be8;
+    color: #563BE8;
     text-decoration: underline;
 }
 
 .callback h3 {
     text-align: center;
-    margin: 0px 0px 25px 0px;
+    margin-bottom: 25px;
     font-size: 20px;
 }
 
 .callback button {
     display: block;
     border: none;
-    background: brown;
+    background: #A00606;
     border-radius: 5px;
     line-height: 32px;
-    padding: 0px 15px;
-    margin: 5px auto 0px auto;
+    padding: 0 15px;
+    margin: 5px auto 0 auto;
 }
 
 .form-contacts label {
@@ -441,7 +450,7 @@ body textarea:required:valid {
     letter-spacing: 2px;
     color: #BDBDBD;
     width: 100%;
-    margin: 0px 0px 20px 0px;
+    margin-bottom: 20px;
 }
 
 .form-contacts input,
@@ -449,7 +458,7 @@ body textarea:required:valid {
     display: block;
     width: 100%;
     border: 1px #484848 solid;
-    background: #2e2e2e;
+    background: #2E2E2E;
     color: white;
     padding: 7px 10px;
     margin-top: 5px;
