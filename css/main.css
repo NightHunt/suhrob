@@ -177,10 +177,15 @@ body textarea:required:valid {
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-.aside-content li a:hover {
+.aside-content li a:hover,
+.aside-content li a.menu-selected:hover {
     text-decoration: none;
     color: white;
     background: #563BE8;
+}
+
+.aside-content li a.menu-selected {
+    background: rgba(86, 59, 232, .5);
 }
 
 .left-side.active .aside-content li a:hover {
@@ -192,7 +197,7 @@ body textarea:required:valid {
     display: inline-block;
     vertical-align: middle;
     font-family: "linea-basic-10", sans-serif;
-    margin: -4px 13px 0 -55px;
+    margin: -4px 13px 0 -58px;
     font-size: 25px;
     line-height: 0;
     -webkit-transition: all .5s;
@@ -464,4 +469,9 @@ body textarea:required:valid {
     margin-top: 5px;
     font-size: 15px;
     max-width: 100%;
+}
+
+.about-skill,
+.certificates {
+    display: inline-block;
 }
