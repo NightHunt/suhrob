@@ -251,7 +251,7 @@ body textarea:required:valid {
     background-image: url("../img/preloader.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    background-posirion: center center;
+    background-position: center center;
     background-color: #FFFFFF;
     height: 60px;
     width: 60px;
@@ -339,7 +339,8 @@ body textarea:required:valid {
     padding: 0;
     position: fixed;
     right: 17px;
-    text-align: center
+    text-align: center;
+    cursor: pointer !important;
 }
 
 /*Стилизация для карусели галлереи*/
