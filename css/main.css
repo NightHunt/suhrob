@@ -33,6 +33,8 @@ body textarea:required:valid {
     height: 100%;
     color: white;
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     overflow-x: hidden;
@@ -47,10 +49,11 @@ body textarea:required:valid {
 /*Чтобы отобразился контент когда открыто меню*/
 .left-side.active .user-info {
     opacity: 1;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    transition-delay: .5s;
+    -webkit-transition: all .2s .5s;
+    -moz-transition: all .2s .5s;;
+    -ms-transition: all .2s .5s;;
+    -o-transition: all .2s .5s;;
+    transition: all .2s .5s;;
 }
 
 .left-side.active .btn-mnu {
@@ -74,6 +77,8 @@ body textarea:required:valid {
     position: relative;
     float: right;
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
 }
@@ -85,6 +90,8 @@ body textarea:required:valid {
     background-color: white;
     position: relative;
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
 }
@@ -124,6 +131,8 @@ body textarea:required:valid {
     opacity: 0; /*Чтобы скрыть контент когда меню свёрнуто*/
     white-space: nowrap; /*Чтобы строки не сворачивались*/
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
 }
@@ -163,10 +172,10 @@ body textarea:required:valid {
     padding: 10px 0 10px 70px;
     white-space: nowrap;
     -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 .aside-content li a:first-child {
@@ -201,6 +210,8 @@ body textarea:required:valid {
     font-size: 25px;
     line-height: 0;
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
 }
@@ -212,10 +223,11 @@ body textarea:required:valid {
 
 .left-side .aside-content nav {
     margin-top: -195px;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    transition-delay: .2s;
+    -webkit-transition: all .2s .5s;
+    -moz-transition: all .2s .5s;
+    -ms-transition: all .2s .5s;
+    -o-transition: all .2s .5s;
+    transition: all .2s .5s;
 }
 
 .left-side.active .aside-content nav {
@@ -237,12 +249,12 @@ body textarea:required:valid {
 /*Стили для иконки загруки сайта*/
 .loader {
     background: none repeat scroll 0 0 #FFFFFF;
-    bottom: 0;
-    height: 100%;
-    left: 0;
     position: fixed;
+    bottom: 0;
+    left: 0;
     right: 0;
     top: 0;
+    height: 100%;
     width: 100%;
     z-index: 5;
 }
@@ -281,12 +293,24 @@ body textarea:required:valid {
 .gallery img {
     display: block;
     max-width: 100%;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    /*Чтобы при наведении мелкие картинки плавно зумировались*/
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
 }
 
 /*Для отступа галлереи при открытии меню*/
+.left-side + .content {
+    left: 0;
+    -webkit-transition: left .5s;
+    -moz-transition: left .5s;
+    -ms-transition: left .5s;
+    -o-transition: left .5s;
+    transition: left .5s;
+}
+
 .left-side.active + .content {
     left: 250px;
 }
@@ -315,6 +339,8 @@ body textarea:required:valid {
 .filter-label {
     background-color: transparent;
     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     padding: 5px 15px;
@@ -326,7 +352,7 @@ body textarea:required:valid {
 }
 
 .filter-label:hover,
-.filter-label:active {
+.filter-label.active {
     background-color: #563BE8;
     opacity: 1;
     border-color: #563BE8;
@@ -344,6 +370,10 @@ body textarea:required:valid {
 }
 
 /*Стилизация для карусели галлереи*/
+.mfp-container {
+    padding: 0;
+}
+
 .mfp-fade.mfp-bg {
     opacity: .7;
 }
@@ -359,6 +389,8 @@ body textarea:required:valid {
 .mfp-fade.mfp-wrap .mfp-content {
     left: 100%;
     -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
 }

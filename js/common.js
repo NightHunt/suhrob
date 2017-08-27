@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //nicescroll свойства
     $("body, .left-side").niceScroll({
-        horizrailenable: false
+        horizrailenabled: false
     });
 
     //Для реализации кнопки меню
@@ -14,11 +14,11 @@ $(document).ready(function () {
     //Включение эффекта медленной загрузки картинок
     $(".gallery img").lazyload({
         effect: "fadeIn"
-    }).hover(function () { //Функция для эффекта при наведении на картинку
-        $(".gallery img").css("opacity", ".7");
+    }).parent().hover(function () { //Функция для эффекта при наведении на картинку
+        $(".gallery a").css("opacity", ".6");
         $(this).css("opacity", "1");
     }, function () { //Обратная функция, когда наведения нет
-        $(".gallery img").css("opacity", "1");
+        $(".gallery a").css("opacity", "1");
     });
 
     $("nav li").hover(function () { //Функция при наведении на меню.
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     //Используется для реализации карусели для галереи
     $(".filter-label").click(function () {
-        $(".filter-label").removeClass("active");
+        $(".filter-label").removeClass("active");//Используется для работы фильтов картинки
         var filter = $(this).addClass("active").data("filter");
         wall.filter(filter);
         setTimeout(function () {
