@@ -443,13 +443,26 @@ body textarea:required:valid {
     font-weight: bold;
 }
 
-.content-body .about-me a:hover {
-    color: #ADA8A8;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    -ms-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
+.content-body .ul-contacts .social img {
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    opacity: .7;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.content-body .ul-contacts .social img:hover {
+    opacity: 1;
+}
+
+.content-body .ul-contacts .phone {
+    font-family: Tahoma Helvetica sans-serif;
+    font-size: 22px;
 }
 
 .form-contacts {
@@ -478,7 +491,17 @@ body textarea:required:valid {
 
 .content-body a,
 .content-body .about-me a {
-    color: #1C56AE;
+    color: #0070C9;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.content-body a:hover {
+    color: #ADA8A8;
     text-decoration: underline dotted;
 }
 
@@ -491,41 +514,45 @@ body textarea:required:valid {
 .callback button {
     display: block;
     border: none;
-    background: #777777;
+    background: rgba(86, 59, 232, .5);
     border-radius: 5px;
     line-height: 32px;
     padding: 0 15px;
     margin: 5px auto 0 auto;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
 }
 
 .callback button:hover {
-    background: #AAAAAA;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    background: #563BE8;
 }
 
 .form-contacts label {
     font-size: 13px;
     letter-spacing: 2px;
-    color: #BDBDBD;
+    color: #DDDDDD;
     width: 100%;
     margin-bottom: 20px;
 }
 
 .form-contacts input,
-.form-contacts textarea {
+.form-contacts textarea,
+.form-contacts select {
     display: block;
-    width: 100%;
+    width: 100% !important;
     border: 1px #484848 solid;
     background: #2E2E2E;
     color: white;
     padding: 7px 10px;
     margin-top: 5px;
     font-size: 15px;
-    max-width: 100%;
+}
+
+.form-contacts textarea {
+    /*resize: none;*/
 }
 
 .about-skill,

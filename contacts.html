@@ -59,7 +59,7 @@
 
     <div class="content">
         <div class="content-header">
-            <h1>Обратная связь</h1>
+            <h1>Мои контакты</h1>
             <p>Связаться со мной можно одним из способов:</p>
         </div>
         <div class="content-body">
@@ -67,32 +67,50 @@
                 <div class="col-sm-6">
                     <ul class="ul-contacts">
                         <li>
-                            <h3 class="block-header"><i class="icon icon-basic-webpage-img-txt"></i>Мой сайт: </h3>
-                            <p><a href="#" target="_blank">http://somesite.ru</a></p>
+                            <h3 class="block-header"><i class="icon icon-basic-webpage-img-txt"></i>Соц. сети: </h3>
+                            <!--<p><a href="#" target="_blank">http://somesite.ru</a></p>-->
+                            <p class="social">
+                                <a href="https://vk.com/id11043951" target="_blank"><img src="img/logos/vk_icon.png" alt="VK"></a>
+                                <a href="https://www.facebook.com/suhrob.kurbonov.7" target="_blank"><img src="img/logos/face_icon.png" alt="Facebook"></a>
+                                <a href="https://twitter.com/MasterArea" target="_blank"><img src="img/logos/twit_icon.png" alt="Twitter"></a>
+                            </p>
                         </li>
                         <li>
                             <h3 class="block-header"><i class="icon icon-basic-geolocalize-05"></i>Адрес: </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                            <p>Россия, Самарская область, Самара, Октябрьский р-н</p>
+                        </li>
+                        <li>
+                            <h3 class="block-header"><i class="icon icon-basic-smartphone"></i>Telegram: </h3>
+                            <a href="https://t.me/Mifuragon" target="_blank">https://t.me/Mifuragon</a>
                         </li>
                         <li>
                             <h3 class="block-header"><i class="icon icon-basic-smartphone"></i>Телефон: </h3>
-                            <p>+7 (999) 777 22 11</p>
+                            <a href="tel:+79270040685" class="phone">+7 (927) 004 06 85</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-6">
                     <form id="callback" class="callback">
-                        <h3>Оставить заявку: </h3>
+                        <h3>Обратная связь: </h3>
                         <label>Ваше имя:
                             <input type="text" name="name" placeholder="Представьтесь..." required>
                         </label>
                         <label>Ваш E-mail:
                             <input type="text" name="email" placeholder="Почта..." required>
                         </label>
-                        <label>Ваш комментарий:
-                            <textarea name="message" placeholder="Сообщение..."></textarea>
+                        <label>Тема сообщения:
+                            <select name="selection">
+                                <option value="Proposal">Предложение</option>
+                                <option value="Review">Отзыв</option>
+                                <option value="Message">Обращение</option>
+                                <option value="Question">Вопрос</option>
+                                <option value="Abuse">Жалоба</option>
+                            </select>
                         </label>
-                        <button type="submit">Отправить заявку</button>
+                        <label>Сообщение:
+                            <textarea name="message" placeholder="Комментарий..."></textarea>
+                        </label>
+                        <button type="submit">Отправить</button>
                     </form>
                 </div>
             </div>
